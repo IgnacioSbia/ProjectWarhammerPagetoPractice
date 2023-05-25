@@ -1,0 +1,10 @@
+.homePageMain{
+    background: url('../../../public/warhammerBackgroundNavBar.jpg');
+}
+.w40kslideImg{
+    width: 50%;
+    height: 10px;
+}
+.itemcarousel{
+    height: 50vh;
+}
