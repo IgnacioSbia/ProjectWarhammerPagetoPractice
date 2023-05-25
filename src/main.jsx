@@ -3,10 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import MainPage from './Components/MainPage/MainPage.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from "./Components/HomePage/HomePage.jsx";
+import NavBar from "./Components/NavBar/NavBar.jsx";
 
 const Router = createBrowserRouter([
-  {path:"/", element: <MainPage/>}
+  {path:"/", element: <HomePage/>}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
