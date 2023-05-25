@@ -14,13 +14,19 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link href="#features" style={{fontFamily:"UnifrakturMaguntia", color:"gray", fontWeight:"bolder"}}>Races</Nav.Link>
-            <Nav.Link href="#pricing" style={{fontFamily:"UnifrakturMaguntia", color:"gray", fontWeight:"bolder"}}>World</Nav.Link>
-            <Nav.Link href="#pricing" style={{fontFamily:"UnifrakturMaguntia", color:"gray", fontWeight:"bolder"}}>About Us</Nav.Link>
+            <NavDropdown title="Xenos" id="collasible-nav-dropdown" className='XenosDropDown'>
+              <NavDropdown.Item href="#action/3.1" className='NavBarDropDownItem'>Eldars</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2" className='NavBarDropDownItem'>
+                Tyranids
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" className='NavBarDropDownItem'>Orks</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#pricing" className='navBarItems'>World</Nav.Link>
+            <Nav.Link href="#pricing" className='navBarItems'>About Us</Nav.Link>
             </Nav>
             <Nav>
-            <Nav.Link href="#deets" style={{fontFamily:"UnifrakturMaguntia", color:"gray"}}>Sign Up</Nav.Link>
-            <Nav.Link href="#deets" style={{fontFamily:"UnifrakturMaguntia", color:"gray"}}>Log In</Nav.Link>
+            <Nav.Link href="#deets" className='navBarItems'>Sign Up</Nav.Link>
+            <Nav.Link href="#deets" className='navBarItems'>Log In</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Container>

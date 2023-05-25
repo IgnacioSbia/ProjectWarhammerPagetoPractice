@@ -4,3 +4,18 @@
     background-position: 90% 50%;
     background-size: 100% 70vh;
 }
+.XenosDropDown{
+    font-family: 'Droid Serif', serif;
+}
+.navBarItems{
+    font-family: 'Droid Serif', serif;
+    color: gray;
+    font-weight: bolder;
+}
+.NavBarDropDownItem{
+    background-color: gray;
+}
+.dropdown-menu.show{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: gray;
+}

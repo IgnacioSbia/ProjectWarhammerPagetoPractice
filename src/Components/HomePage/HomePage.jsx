@@ -3,13 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-bootstrap/Carousel';
 import './HomePage.css';
-import warhammer from '../../../public/warhammer40k.gif'
+import warhammer from '../../../public/warhammer40k.gif';
 import warhammerImperium from '../../../public/Warhammer40kImperium2.gif';
 import warhammerOrks from '../../../public/warhammer40korks.gif';
 import warhammerEldars from '../../../public/warhammer40keldars.gif';
 import warhammerTyranids from '../../../public/warhammer40ktyranids.gif';
 import warhammerNecrons from '../../../public/warhammer40knecrons.gif';
 import NavBar from '../NavBar/NavBar';
+import newsWarhammer from '../../../public/WarhammerNews.png';
+
 
 function HomePage() {
   return (
@@ -18,6 +20,7 @@ function HomePage() {
         <NavBar/>
     </header>
     <main className='homePageMain'>
+        {/* Presentation*/}
         <div className='container-sm homePageMain'>
                 <div>
                     <Carousel>
@@ -80,9 +83,45 @@ function HomePage() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <div>
-                    <p>Aqui van las noticias</p>
-                </div>
+             {/* News and General Info */}
+                <aside className='container-sm HomeMainPageNewsContainer'>
+                    <img src={newsWarhammer}/>
+                    <ul className='homeMainPageNewsLists'>
+                        
+                        <li>
+                            <div className='homeMainPageNews'>
+                                <h3 >The lion Returns !</h3>
+                                <p >After thousands of years, the Primarch makes his return.</p>
+                            </div>
+                        </li>
+                         
+                        <li>
+                            <div className='homeMainPageNews'>
+                                <h3>Primaris versus the Inquisition ?</h3>
+                                <p>Conflicts starts to show in the imperium.</p>
+                            </div>
+                        </li>
+                         
+                        <li>
+                            <div className='homeMainPageNews'>
+                                <h3>The new Necron Lord</h3>
+                                <p>A new ork tribe has been formed.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='homeMainPageNews'>
+                                <h3>The new Ork tribe</h3>
+                                <p>A new ork tribe has been formed.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='homeMainPageNews'>
+                                <h3 >The new Ork tribe</h3>
+                                <p >A new ork tribe has been formed.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
         
         
         </div>
