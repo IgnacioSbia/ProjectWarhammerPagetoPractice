@@ -1,0 +1,104 @@
+* {
+    font-family: 'Droid Serif', serif;
+}
+
+#containerWAAGH {
+    /*    width: 117.41rem;
+    height: 100%; */
+    background: url(https://www.warhammer-community.com/wp-content/uploads/2021/08/EtdY7J2GpCGnEnOj-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.animation {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+
+@keyframes example {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 200px;
+        top: 30px;
+    }
+
+    50% {
+        left: 800px;
+        top: 30px;
+    }
+
+    75% {
+        left: 1300px;
+        top: 30px;
+    }
+
+    100% {
+        left: 2000px;
+        top: 30px;
+    }
+}
+
+.mainSectionOrkoz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    gap: 2rem;
+}
+
+#orkozMaiinIfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+
+
+}
+
+.clanzSectiion {
+    display: flex;
+    gap: 1rem;
+}
+
+.cardClanzComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    border-image-slice: 20%
+}
+
+.clanzImgSize {
+    width: 210px;
+    height: 210px;
+}
+
+.cardClanzComponent:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 3px 3px rgb(71, 129, 24);
+}
