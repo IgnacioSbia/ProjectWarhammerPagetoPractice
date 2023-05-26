@@ -11,6 +11,7 @@ import warhammerTyranids from '../../../public/warhammer40ktyranids.gif';
 import warhammerNecrons from '../../../public/warhammer40knecrons.gif';
 import NavBar from '../NavBar/NavBar';
 import newsWarhammer from '../../../public/WarhammerNews.png';
+import Footer from '../Footer/Footer';
 
 
 function HomePage() {
@@ -126,6 +127,9 @@ function HomePage() {
         
         </div>
     </main>
+    <footer>
+        <Footer/>
+    </footer>
     </>
   
   )

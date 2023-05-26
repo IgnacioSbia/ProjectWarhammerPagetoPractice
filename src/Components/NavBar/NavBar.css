@@ -19,3 +19,32 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: gray;
 }
+.NavBarRegisterButton{
+    background:none;
+    border: none;
+    font-family: 'Droid Serif', serif;
+    line-height: 10%;
+}
+.NavBarRegisterButton:hover{
+    background:none !important; 
+}
+.SignInEmailMessage{
+    margin-bottom: 10em;
+    color: #838486;
+    opacity: 60%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: .4em;
+}
+.modal-content {
+    background:url('../../../public/warhammerBackgroundNavbar2.jpg');
+    background-position: 50% 70%;
+}
+.signUpModal{
+    color: white;
+}
+.servoSignUp{
+    position: absolute;
+    right: 50%;
+    z-index: -1;
+}
