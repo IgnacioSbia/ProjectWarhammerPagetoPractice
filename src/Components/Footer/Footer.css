@@ -1,0 +1,7 @@
+.footerContent{
+    background: url('../../../public/warhammerBackgroundNavBar3.jpg');
+    background-position: 20% 100%;
+    background-repeat: no-repeat;
+    font-family: 'Droid Serif', serif;
+    color: white;
+}
