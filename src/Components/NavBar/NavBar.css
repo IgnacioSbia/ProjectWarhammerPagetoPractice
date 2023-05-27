@@ -30,7 +30,7 @@
 }
 .SignInEmailMessage{
     margin-bottom: 10em;
-    color: #838486;
+    color: #ffffff;
     opacity: 60%;
     font-size: 14px;
     font-weight: bold;
@@ -47,4 +47,29 @@
     position: absolute;
     right: 50%;
     z-index: -1;
+}
+.signInNavBarEmail{
+    background-color: black;
+    color: white;
+    border: none;
+}
+.signUpButton{
+   background-color: black;
+   border: none;
+}
+.signUpButton:disabled{
+    background-color: gray;
+    border: none;
+}
+.signInNavBarEmail:focus{
+    background-color: black;
+    color: white;
+    border: white;
+
+}
+.signUpTitle{
+    padding-left: 31%;
+}
+.signUpTitleLogin{
+    padding-left: 42%;
 }
