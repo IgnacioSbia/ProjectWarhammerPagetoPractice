@@ -16,11 +16,11 @@ const Router = createBrowserRouter([
 
     ],
   },
+
   {
-    path: "waagh",
+    path: "/waagh",
     element: <WAAGH />
   },
-
 
 
 ]);
