@@ -16,13 +16,11 @@ const Router = createBrowserRouter([
 
     ],
   },
+
   {
-    path: "waagh",
+    path: "/waagh",
     element: <WAAGH />
   },
-
-
-
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

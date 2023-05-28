@@ -1,31 +1,53 @@
-.homePageMain{
+.homePageMain {
     background: url('../../../public/warhammerBackgroundNavBar3.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-.w40kslideImg{
+
+.w40kslideImg {
     width: 50%;
     height: 10px;
 }
-.itemcarousel{
+
+.itemcarousel {
     height: 50vh;
 }
-.HomeMainPageNewsContainer{
+
+.HomeMainPageNewsContainer {
     padding-top: 10%;
     padding-bottom: 5%;
 }
-.homeMainPageNewsLists{
-   border: 1px solid #e4e6e8;
-   border-color: white;
-   width: 40%;
-   border-radius: 25px;
-   list-style: none;
-   
+
+.homeMainPageNewsLists {
+    border: 1px solid #e4e6e8;
+    border-color: white;
+    width: 40%;
+    border-radius: 25px;
+    list-style: none;
+
 }
-.homeMainPageNews{
+
+.homeMainPageNews {
     border: 1px solid #e4e6e8;
     border-radius: 14px 25px;
-    color:white;
+    color: white;
     font-family: 'Droid Serif', serif;
     padding: 10px;
+}
+
+.midHomepageSectiion {
+    display: flex;
+    gap: 20rem;
+}
+
+.reproductor {
+    position: absolute;
+    width: 44%;
+    height: 150px;
+    left: 50%;
+}
+
+._RZMQZ {
+    width: 90%;
+    display: none;
 }

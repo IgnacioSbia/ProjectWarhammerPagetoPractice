@@ -3,26 +3,25 @@
 }
 
 #containerWAAGH {
-    /*    width: 117.41rem;
-    height: 100%; */
+    padding-top: 4rem;
     background: url(https://www.warhammer-community.com/wp-content/uploads/2021/08/EtdY7J2GpCGnEnOj-scaled.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    font-size: 20px;
 }
 
 .animation {
+    top: 15%;
+    left: 0%;
     width: 200px;
     height: 150px;
-    position: relative;
+    position: absolute;
     animation-name: example;
     animation-duration: 10s;
     animation-iteration-count: 1;
     animation-direction: alternate;
     animation-timing-function: linear;
+
 
 }
 
@@ -30,27 +29,27 @@
 @keyframes example {
     0% {
         left: 0px;
-        top: 0px;
+        top: 15%;
     }
 
     25% {
-        left: 200px;
-        top: 30px;
+        left: 10%;
+        top: 15%;
     }
 
     50% {
-        left: 800px;
-        top: 30px;
+        left: 30%;
+        top: 15%;
     }
 
     75% {
-        left: 1300px;
-        top: 30px;
+        left: 70%;
+        top: 15%;
     }
 
     100% {
-        left: 2000px;
-        top: 30px;
+        left: 80%;
+        top: 15%;
     }
 }
 
@@ -59,9 +58,10 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
     gap: 2rem;
+
 }
 
 #orkozMaiinIfo {
@@ -70,17 +70,25 @@
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    background-image: url(https://media.istockphoto.com/id/516108818/es/foto/textura-de-papel-viejo-vitrales.jpg?s=612x612&w=0&k=20&c=lTq3ISjj2Kv6D00URO2-byEeeuek7nQCJGe_WV8D0qE=);
+    /*     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+ */
+    color: black;
 
+}
 
+a:link {
+    text-decoration: none;
 }
 
 .clanzSectiion {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .cardClanzComponent {
@@ -101,4 +109,99 @@
 .cardClanzComponent:hover {
     transform: scale(1.1);
     box-shadow: 3px 3px 3px 3px rgb(71, 129, 24);
+}
+
+.clanzInfoSection {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#badMoons {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+#BloodAxes {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 3rem;
+
+}
+
+#DeathSkulls {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+#EvilSunz {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+#freeBooterz {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+#Goffs {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+#snakeBites {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.clanzImgicon {
+    width: 50px;
+    height: 50px;
+
+}
+
+.titleGap {
+    gap: 3rem;
+}
+
+.orkzHistorySection {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
 }
