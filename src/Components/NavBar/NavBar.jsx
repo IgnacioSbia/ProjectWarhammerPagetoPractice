@@ -230,6 +230,46 @@ function NavBar() {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      {/*Here the Login Modal */}
+
+      <Modal show={showLogin} onHide={handleCloseLogin} className='signUpModal'>
+        <Modal.Header closeButton>
+          <img src={servoskull2} className='servoSignUp' />
+          <Modal.Title style={{ fontFamily: "UnifrakturMaguntia", color: "white", fontWeight: "bolder" }} className='signUpTitleLogin'>Login</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="name@example.com"
+                value={signEmail}
+                onChange={handleEmailChange}
+                className="signInNavBarEmail"
+
+              />
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="************"
+                value={password}
+                onChange={handlePasswordChange}
+                className="signInNavBarEmail"
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => { handleCloseLogin(), onModalClose() }}>
+            Close
+          </Button>
+          <Button className='signUpButton' variant="primary" onClick={() => { handleSubmitLogin(), handleCloseLogin(), onModalClose() }} disabled={validPassword && signValidEmail ? false : true}>
+            Log In
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Navbar>
 
   )
