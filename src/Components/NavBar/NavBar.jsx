@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -19,16 +19,61 @@ function NavBar() {
   const handleShow = () => setShow(true);
   const handleCloseLogin = ()=> setShowLogin(false);
   const handleShowLogin = ()=> setShowLogin(true);
-
+  const [loged, setLoged] = useState(false)
+  const [userInfo, setUserInfo] = useState([])
   const [signEmail, setSignEmail] = useState("");
   const [signValidEmail, setSignValidEmail] = useState(false);
   const [validPassword, setValidPassword] = useState(false);
   const [password, setPassword] = useState("");
 
   //Functions
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    localStorage.setItem('email',email)
+  const handleSubmit = async (event) => {
+
+    //Register Fetch
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    const user = {mail: signEmail,
+    password:password};
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: JSON.stringify(user),
+      redirect: 'follow'
+    };
+    
+    await fetch("http://localhost:8000/api/register", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+  };
+
+  const handleSubmitLogin = () => {
+
+    //Login Fetch
+    const userlogin = { email:signEmail, password: password };
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: JSON.stringify(userlogin),
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:8000/api/login", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {if(result.token){
+        localStorage.setItem("token", result.token),
+        localStorage.setItem("iduser", result.id_user),
+        setLoged(true);
+           
+      }else{
+        alert('Contraseña o Nombre Incorrecto')
+      }})
+
+      .catch((error) => console.log("error", error));
   };
   const handleEmailChange = (event) => {
     const emailValue = event.target.value;
@@ -50,6 +95,23 @@ function NavBar() {
     setPassword('')
   }
 
+  useEffect(()=>{
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+     fetch(`http://localhost:8000/api/userEmail?iduser=${localStorage.getItem("iduser")}`, requestOptions)
+      .then(response => response.json())
+      .then(result => setUserInfo(result.rslt[0]))
+      .catch(error => console.log('error', error));
+      
+  }, []);
+
+  const handleLogOut = ()=>{
+    localStorage.clear()
+    setLoged(false)
+  }
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navBarBar'>
@@ -68,12 +130,19 @@ function NavBar() {
             <Nav.Link href="#pricing" className='navBarItems'>World</Nav.Link>
             <Nav.Link href="#pricing" className='navBarItems'>About Us</Nav.Link>
             </Nav>
-            <Nav>
-            <Nav.Link href="#deets" className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShow}>
-        Register
-      </Button></Nav.Link>
-            <Nav.Link href="#deets" className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShowLogin}>Log In</Button></Nav.Link>
-            </Nav>
+            {loged  ? 
+            <NavDropdown title={userInfo.email} id="collasible-nav-dropdown" className='userDropDown'>
+              <NavDropdown.Item href="#action/3.1" className='NavBarDropDownItem'>Profile</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" className='NavBarDropDownItem' onClick={handleLogOut}>Log out</NavDropdown.Item>
+            </NavDropdown> 
+            :
+                  <Nav>
+                  <Nav.Link href="#deets" className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShow}>
+                Register
+               </Button></Nav.Link>
+                <Nav.Link href="#deets" className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShowLogin}>Log In</Button></Nav.Link>
+                </Nav>
+            }
         </Navbar.Collapse>
         </Container>
         
@@ -110,7 +179,7 @@ function NavBar() {
             <Button variant="secondary" onClick={()=>{handleClose(), onModalClose()}}>
               Close
             </Button>
-            <Button className='signUpButton' variant="primary" onClick={()=>{handleClose(),  onModalClose()}} disabled={validPassword && signValidEmail  ? false : true}>
+            <Button className='signUpButton' variant="primary" onClick={()=>{handleSubmit(), handleClose(),  onModalClose()}} disabled={validPassword && signValidEmail  ? false : true}>
               Sign Up
             </Button>
           </Modal.Footer>
@@ -150,7 +219,7 @@ function NavBar() {
             <Button variant="secondary" onClick={()=>{handleCloseLogin(), onModalClose()}}>
               Close
             </Button>
-            <Button className='signUpButton' variant="primary" onClick={()=>{handleCloseLogin(),  onModalClose()}} disabled={validPassword && signValidEmail  ? false : true}>
+            <Button className='signUpButton' variant="primary" onClick={()=>{handleSubmitLogin(),handleCloseLogin(),  onModalClose()}} disabled={validPassword && signValidEmail  ? false : true}>
               Log In
             </Button>
           </Modal.Footer>
