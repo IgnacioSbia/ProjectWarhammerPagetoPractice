@@ -9,10 +9,28 @@ import FreeBooterz from '../../assets/Freebooterz.png'
 import Goffs from '../../assets/Goffs.png'
 import SnakeBites from '../../assets/SakeBites.png'
 import NavBar from '../NavBar/NavBar'
+import Player from "@madzadev/audio-player";
+import "@madzadev/audio-player/dist/index.css";
+import tus50 from '../../assets/emanero.mp3'
+import mainSong from '../../assets/Warhammer 40,000_ Darktide - .mp3'
 
+const tracks = [
+    {
+        url: tus50,
+        title: "MOMO",
+        tags: ["house"],
+    },
+    {
+        url: mainSong,
+        title: "Warhammer 40,000_ Darktide",
+        tags: ["dnb"],
+    },
+
+];
 function WAAGH() {
     return (
         <>
+
             <NavBar />
             <div id='containerWAAGH'>
 
@@ -70,6 +88,23 @@ function WAAGH() {
                             <img src={SnakeBites} alt="SnakeBites" className='clanzImgSize' />
                             <h4>Snake Bites</h4>
                         </div></a>
+                    </section>
+                    <section className='orkzHistorySection'>
+                        <h4>History</h4>
+                        <div>
+                            <h5>Origin</h5>
+                            <p>The Orks are a biologically-engineered species, created more than 60 million Terran years ago as a warrior race originally called the Krork by the long-vanished reptilian alien species known as the Old Ones, whom the Orks refer to as the Brain Boyz.</p>
+                            <p>The ancient Krork were known to possess more advanced technology than that of the present greenskin race, and to be on average larger, in some cases standing as tall as 12 metres.</p>
+                            <p>The Orks were created by the Brain Boyz to fight the Necrons and their C'tan masters in the great interstellar conflict called the War in Heaven that shattered the galactic civilisation of the Old Ones that existed prior to the rise of the Aeldari.</p>
+                            <p>Orks are thus genetically engineered to be muscular, aggressive, and none too bright; their technology is maintained by a caste of Oddboyz who possess genetically-implanted dispositions and technical knowledge that grant them unusual skill with maintaining and developing technology.</p>
+                            However, this skill is an unconscious one preserved through genetic memories hard-wired into the Oddboyz's DNA by the Brain Boyz millions of standard years ago.
+                            <p>Indeed, the Brain Boyz were apparently able to encode information on how to build simple machinery into the genomes of all Orks; thus Mekboyz require very little training in their function within Ork "kultur," since they understand mechanical principles at a fully instinctive level.</p>
+                            <p>Orks lack individual psychic power, being denied such abilities by the Old Ones. However, they do have a sort of collaborative, collective psychic ability, meaning that if enough Orks believe something is true, then it will actually become so, brought into being in realspace through the power of the Immaterium by their gestalt psychic ability.
+
+                                For example, Ork rockets painted yellow create bigger explosions, simply because the vast majority of Orks believe they do.
+
+                                This is also why much of the Orks' seemingly ramshackle technology will do terrible damage in the hands of Orks, but will cease to function when used by other intelligent races.</p>
+                        </div>
                     </section>
                     <section className='clanzInfoSection'>
                         <section id='badMoons'>
@@ -165,6 +200,7 @@ function WAAGH() {
                                 They bedeck themselves with natty finery, and even their Grot minions get stuffed into gold-buttoned frock coats and brag loudly of their masters' wealth. Flash Gitz also sport profusions of piercings, furs, glyph-plates, brightly coloured pirate garb and extravagant hats. All of this showy nonsense does absolutely nothing though to hide the hulking, muscular bulk and bestial lethality of the Flash Gitz themselves.</p>
                         </section>
                     </section>
+
                 </main>
 
             </div>
