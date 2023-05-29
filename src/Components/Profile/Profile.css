@@ -1,0 +1,17 @@
+.ProfileUserImage{
+    width: 12.5%;
+    height: 12.5%;
+}
+.ProfileuserInformation{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.623);
+    height: 100vh;
+}
+.ProfileContent{
+    height: 100vh;
+    background: url('../../../public/warhammerBackgroundNavBar3.jpg');
+}
+.ProfileUserName{
+    line-height: 270%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from "./Components/HomePage/HomePage.jsx";
 import NavBar from "./Components/NavBar/NavBar.jsx";
 import WAAGH from "./Components/WAAGH/WAAGH.jsx";
+import Profile from "./Components/Profile/Profile.jsx";
 import Tyranids from "./Components/Tyranids/Tyranids.jsx";
 
 const Router = createBrowserRouter([
@@ -26,6 +27,10 @@ const Router = createBrowserRouter([
     path: '/tyranids',
     element: <Tyranids />
   },
+  {
+    path: "/profile",
+    element: <Profile />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
