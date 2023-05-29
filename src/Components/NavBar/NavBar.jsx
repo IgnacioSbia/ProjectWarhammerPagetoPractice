@@ -101,6 +101,9 @@ function NavBar() {
   }
 
   useEffect(() => {
+      const getUser = async ()=>{
+
+      
     var requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -108,9 +111,10 @@ function NavBar() {
 
     fetch(`http://localhost:8000/api/userEmail?iduser=${localStorage.getItem("iduser")}`, requestOptions)
       .then(response => response.json())
-      .then(result => setUserInfo(result.rslt[0]))
+      .then(result => setUserInfo(result.rslt[0]),localStorage.setItem('mail',userInfo.email))
       .catch(error => console.log('error', error));
-
+    };
+    getUser();
   }, []);
 
   const handleLogOut = () => {
