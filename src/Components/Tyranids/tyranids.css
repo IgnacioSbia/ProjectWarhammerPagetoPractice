@@ -1,0 +1,74 @@
+#containerTyranids {
+    padding-top: 4rem;
+    background: url(https://wallpaperaccess.com/full/3187297.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
+    padding: 4rem 3rem 1rem 3rem;
+
+
+}
+
+.mainTyranidSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+.tyranidsMainInfo {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tyranidHistoySection {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tyranidSpeciesSection {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tyranidsList {
+    gap: 3rem;
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tyranidsLogo {
+    width: 100px;
+    height: 100px;
+}
+
+.tyranidCombatDoctrieSectionn {
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

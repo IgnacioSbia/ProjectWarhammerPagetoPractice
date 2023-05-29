@@ -127,8 +127,8 @@ function NavBar() {
           <Nav className="me-auto">
             <NavDropdown title="Xenos" id="collasible-nav-dropdown" className='XenosDropDown'>
               <NavDropdown.Item href="#action/3.1" className='NavBarDropDownItem'>Eldars</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" className='NavBarDropDownItem'>
-                Tyranids
+              <NavDropdown.Item href="#action/3.2" className='NavBarDropDownItem'> <Link to='/tyranids'>
+                Tyranids</Link>
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#action/3.3" className='NavBarDropDownItem'><Link to='/waagh'>Orks</Link></NavDropdown.Item>

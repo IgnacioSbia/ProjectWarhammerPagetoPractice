@@ -13,6 +13,8 @@ import Player from "@madzadev/audio-player";
 import "@madzadev/audio-player/dist/index.css";
 import tus50 from '../../assets/emanero.mp3'
 import mainSong from '../../assets/Warhammer 40,000_ Darktide - .mp3'
+import fondo from '../../assets/backGround.png'
+import Footer from '../Footer/Footer.jsx'
 
 const tracks = [
     {
@@ -202,7 +204,9 @@ function WAAGH() {
                     </section>
 
                 </main>
-
+                <footer className='footerOrkz'>
+                    <Footer />
+                </footer>
             </div>
         </>
     )

@@ -61,6 +61,7 @@
     padding-left: 10rem;
     padding-right: 10rem;
     gap: 2rem;
+    border-radius: 3px;
 
 }
 
@@ -71,9 +72,9 @@
     flex-direction: column;
     gap: 2rem;
     padding: 1rem 3rem 1rem 3rem;
-    background-image: url(https://media.istockphoto.com/id/516108818/es/foto/textura-de-papel-viejo-vitrales.jpg?s=612x612&w=0&k=20&c=lTq3ISjj2Kv6D00URO2-byEeeuek7nQCJGe_WV8D0qE=);
-    /*     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
- */
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
     color: black;
 
 }
@@ -84,10 +85,11 @@ a:link {
 
 .clanzSectiion {
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
 
 }
 
@@ -97,8 +99,11 @@ a:link {
     align-items: center;
     flex-direction: column;
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
-    border-image-slice: 20%
+    color: black;
+    border-image-slice: 20%;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 }
 
 .clanzImgSize {
@@ -112,82 +117,104 @@ a:link {
 }
 
 .clanzInfoSection {
-    gap: 1rem;
+    gap: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 #badMoons {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 }
 
 #BloodAxes {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 
 }
 
 #DeathSkulls {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 }
 
 #EvilSunz {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 }
 
 #freeBooterz {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 }
 
 #Goffs {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 }
 
 #snakeBites {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
 }
 
 .clanzImgicon {
@@ -202,6 +229,13 @@ a:link {
 
 .orkzHistorySection {
     background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
-    color: white;
+    color: black;
     padding: 1rem 3rem 1rem 3rem;
+    background-image: url(../../assets/backGround.png);
+    background-size: cover;
+    border-radius: 3px;
+}
+
+.footerOrkz {
+    padding-top: 3rem;
 }
