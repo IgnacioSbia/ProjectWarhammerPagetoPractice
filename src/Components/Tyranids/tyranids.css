@@ -1,8 +1,9 @@
 #containerTyranids {
     padding-top: 4rem;
-    background: url(https://wallpaperaccess.com/full/3187297.jpg);
+    background: url(https://i.pinimg.com/originals/c0/1c/e1/c01ce1788e1db9fa42f5b90cc9bb8492.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     font-size: 20px;
     padding: 4rem 3rem 1rem 3rem;
 
@@ -71,4 +72,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.tyranidsTypeImgSize {
+    height: 300px;
+    width: 250px;
+}
+
+.tyranidsObjectList {
+    gap: 1rem;
+    display: flex;
 }
