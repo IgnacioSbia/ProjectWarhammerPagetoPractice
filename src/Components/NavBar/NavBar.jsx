@@ -9,24 +9,24 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import servoskull2 from '../../../public/ServoSkull2.png';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
-function NavBar() {
+function NavBar(props) {
   const [show, setShow] = useState(false);
   const [showLogin, setShowLogin] = useState(false)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleCloseLogin = () => setShowLogin(false);
   const handleShowLogin = () => setShowLogin(true);
-  const [loged, setLoged] = useState(false)
+  const [loged, setLoged] = useState(JSON.parse(localStorage.getItem('loged')) === true)
   const [userInfo, setUserInfo] = useState([])
   const [signEmail, setSignEmail] = useState("");
   const [signValidEmail, setSignValidEmail] = useState(false);
   const [validPassword, setValidPassword] = useState(false);
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   //Functions
   const handleSubmit = async (event) => {
 
@@ -50,6 +50,12 @@ function NavBar() {
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
   };
+  const handleProfile = ()=>{
+    navigate("/Profile")
+  };
+  const handleHome = ()=>{
+    navigate("/")
+  };
 
   const handleSubmitLogin = () => {
 
@@ -71,7 +77,7 @@ function NavBar() {
         if (result.token) {
           localStorage.setItem("token", result.token),
             localStorage.setItem("iduser", result.id_user),
-            setLoged(true);
+            setLoged(!loged)
 
         } else {
           alert('Contraseña o Nombre Incorrecto')
@@ -91,7 +97,7 @@ function NavBar() {
   const handlePasswordChange = (event) => {
     const passwordValue = event.target.value;
     setPassword(passwordValue);
-    // Aca va la validacion de la base de datos de si el nombre de usuario esta disponible
+    
     let isValid = passwordValue.length >= 8;
     setValidPassword(isValid);
   }
@@ -109,9 +115,13 @@ function NavBar() {
       redirect: 'follow'
     };
 
-    fetch(`http://localhost:8000/api/userEmail?iduser=${localStorage.getItem("iduser")}`, requestOptions)
+     fetch(`http://localhost:8000/api/userEmail?iduser=${localStorage.getItem("iduser")}`, requestOptions)
       .then(response => response.json())
-      .then(result => setUserInfo(result.rslt[0]),localStorage.setItem('mail',userInfo.email))
+      .then(result => {
+        if(result.rslt){
+          setUserInfo(result.rslt[0]).then(localStorage.setItem('mail',userInfo.email))
+        }
+        })
       .catch(error => console.log('error', error));
     };
     getUser();
@@ -125,7 +135,7 @@ function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navBarBar'>
       <Container>
-        <Navbar.Brand href="#home" className='h-50 w-50'><img src={warhammerLogo} className='h-50 w-50' /></Navbar.Brand>
+        <Navbar.Brand onClick={handleHome} className='h-50 w-50'><img src={warhammerLogo} className='h-50 w-50' /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -142,7 +152,7 @@ function NavBar() {
           </Nav>
           {loged ?
             <NavDropdown title={userInfo.email} id="collasible-nav-dropdown" className='userDropDown'>
-              <NavDropdown.Item href="#action/3.1" className='NavBarDropDownItem'>Profile</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleProfile} className='NavBarDropDownItem'>Profile</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3" className='NavBarDropDownItem' onClick={handleLogOut}>Log out</NavDropdown.Item>
             </NavDropdown>
             :

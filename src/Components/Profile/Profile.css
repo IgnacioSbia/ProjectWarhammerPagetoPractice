@@ -1,17 +1,31 @@
 .ProfileUserImage{
     width: 12.5%;
-    height: 12.5%;
+    height: 50.5%;
 }
 .ProfileuserInformation{
     display: flex;
     background-color: rgba(0, 0, 0, 0.623);
     height: 100vh;
+    flex-direction: column;
+}
+.ProfileUserInfoInformation{
+    display: flex;
 }
 .ProfileContent{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: url('../../../public/warhammerBackgroundNavBar3.jpg');
 }
 .ProfileUserName{
     line-height: 270%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ProfileUserFavouriteRace{
+    color: rgb(85, 85, 85);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ProfileFavouriteRace{
+    color: rgb(182, 182, 182);
+    font-size: 30px;
 }
