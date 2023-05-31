@@ -57,7 +57,7 @@ function NavBar(props) {
     navigate("/")
   };
 
-  const handleSubmitLogin = () => {
+  const handleSubmitLogin = async () => {
 
     //Login Fetch
     const userlogin = { email: signEmail, password: password };
@@ -71,13 +71,13 @@ function NavBar(props) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/api/login", requestOptions)
+    await fetch("http://localhost:8000/api/login", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.token) {
           localStorage.setItem("token", result.token),
-            localStorage.setItem("iduser", result.id_user),
-            setLoged(!loged)
+          localStorage.setItem("iduser", result.id_user),
+          setLoged(!loged)
 
         } else {
           alert('Contraseña o Nombre Incorrecto')
@@ -105,10 +105,16 @@ function NavBar(props) {
     setSignEmail('')
     setPassword('')
   }
-
+  const token = localStorage.getItem("token")
+  
   useEffect(() => {
-    const getUser = async () => {
-
+    const getUser = async ()=>{
+      
+      
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
 
       var requestOptions = {
         method: 'GET',
@@ -131,6 +137,7 @@ function NavBar(props) {
     localStorage.clear()
     setLoged(false)
   }
+  console.log(userInfo)
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navBarBar'>

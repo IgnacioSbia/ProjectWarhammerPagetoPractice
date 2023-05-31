@@ -15,27 +15,81 @@ import tus50 from '../../assets/emanero.mp3'
 import mainSong from '../../assets/Warhammer 40,000_ Darktide - .mp3'
 import fondo from '../../assets/backGround.png'
 import Footer from '../Footer/Footer.jsx'
+import { useState } from 'react'
 
-const tracks = [
-    {
-        url: tus50,
-        title: "MOMO",
-        tags: ["house"],
-    },
-    {
-        url: mainSong,
-        title: "Warhammer 40,000_ Darktide",
-        tags: ["dnb"],
-    },
 
-];
+
 function WAAGH() {
+    const tracks = [
+        {
+            url: tus50,
+            title: "MOMO",
+            tags: ["house"],
+        },
+        {
+            url: mainSong,
+            title: "Warhammer 40,000_ Darktide",
+            tags: ["dnb"],
+        },
+    
+    ];
+    const [loged, setLoged] = useState(JSON.parse(localStorage.getItem('loged')) === true);
+    const [favourite, setFavourite] =useState(false);
+    const token = localStorage.getItem('token');
+    
+    const handleFavourite =(orks)=>{
+        if(favoruite){
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Authorization", "eyJhbGciOiJIUzI1NiJ9.e30.N7KcfK71TKRWlSO7zvcpafRonh6CXWJ_IVSLWYg7V_Y");
+            const userinfo = {userid: localStorage.getItem('iduser')}
+            
+            var requestOptions = {
+            method: 'DELETE',
+            headers: myHeaders,
+            body: JSON.stringify(userinfo),
+            redirect: 'follow'
+            };
+    
+            fetch("http://localhost:8000/api/deleteFavRace", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+            setFavourite(!favourite )
+        }else{
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Authorization", token);
+            const userFavAdd = {
+                userid: localStorage.getItem('iduser'),
+                raceid: orks
+            }
+    
+            var requestOptions = {
+            method: 'DELETE',
+            headers: myHeaders,
+            body: JSON.stringify(userFavAdd),
+            redirect: 'follow'
+            };
+    
+            fetch("http://localhost:8000/api/FavRace", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+                }
+    }
+
+
     return (
         <>
-
+            
             <NavBar />
+          
             <div id='containerWAAGH'>
-
+                <div>
+                    {loged && !favourite ? <button className='OrkzFAvButton' ><img/>Favourite</button>: <></> }
+                    {loged && favourite ? <button className='OrkzFAvButton' ><img/>Favourite</button>: <></>}
+                </div>
                 <section> <img src={KOPTERO} alt="" className='animation' /></section>
                 <main className='mainSectionOrkoz'>
 
