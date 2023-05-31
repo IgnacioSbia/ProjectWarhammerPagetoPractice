@@ -50,10 +50,10 @@ function NavBar(props) {
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
   };
-  const handleProfile = ()=>{
+  const handleProfile = () => {
     navigate("/Profile")
   };
-  const handleHome = ()=>{
+  const handleHome = () => {
     navigate("/")
   };
 
@@ -97,7 +97,7 @@ function NavBar(props) {
   const handlePasswordChange = (event) => {
     const passwordValue = event.target.value;
     setPassword(passwordValue);
-    
+
     let isValid = passwordValue.length >= 8;
     setValidPassword(isValid);
   }
@@ -116,14 +116,19 @@ function NavBar(props) {
       redirect: 'follow'
     };
 
-     fetch(`http://localhost:8000/api/userEmail?iduser=${localStorage.getItem("iduser")}`, requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        if(result.rslt){
-          setUserInfo(result.rslt[0]).then(localStorage.setItem('mail',userInfo.email))
-        }
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+
+      fetch(`http://localhost:8000/api/userEmail?iduser=${localStorage.getItem("iduser")}`, requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          if (result.rslt) {
+            setUserInfo(result.rslt[0]).then(localStorage.setItem('mail', userInfo.email))
+          }
         })
-      .catch(error => console.log('error', error));
+        .catch(error => console.log('error', error));
     };
     getUser();
   }, []);
@@ -148,6 +153,7 @@ function NavBar(props) {
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#action/3.3" className='NavBarDropDownItem'><Link to='/waagh'>Orks</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4" className='NavBarDropDownItem'><Link to='/necrons'>Negrons</Link></NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#pricing" className='navBarItems'>World</Nav.Link>
             <Nav.Link href="#pricing" className='navBarItems'>About Us</Nav.Link>
