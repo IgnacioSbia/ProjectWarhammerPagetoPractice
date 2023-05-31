@@ -9,6 +9,7 @@ import NavBar from "./Components/NavBar/NavBar.jsx";
 import WAAGH from "./Components/WAAGH/WAAGH.jsx";
 import Profile from "./Components/Profile/Profile.jsx";
 import Tyranids from "./Components/Tyranids/Tyranids.jsx";
+import Necrons from "./Components/Necrons/Necrons.jsx";
 
 const Router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -30,6 +31,11 @@ const Router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />
+  },
+
+  {
+    path: "/necrons",
+    element: <Necrons />
   }
 ]);
 
