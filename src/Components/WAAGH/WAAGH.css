@@ -25,7 +25,10 @@
 
 
 }
-
+.OrkzFAvButton{
+    width: 60%;
+    height: 100%;
+}
 
 @keyframes example {
     0% {
