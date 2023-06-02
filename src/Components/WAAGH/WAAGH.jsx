@@ -38,7 +38,7 @@ function WAAGH() {
     const token = localStorage.getItem('token');
     
     const handleFavourite =(orks)=>{
-        if(favoruite){
+        if(favourite){
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Authorization", "eyJhbGciOiJIUzI1NiJ9.e30.N7KcfK71TKRWlSO7zvcpafRonh6CXWJ_IVSLWYg7V_Y");
