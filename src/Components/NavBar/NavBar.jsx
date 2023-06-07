@@ -56,6 +56,21 @@ function NavBar(props) {
   const handleHome = () => {
     navigate("/")
   };
+  const handleOrkz = () => {
+    navigate("/waagh")
+  };
+  const handleNecrons = () => {
+    navigate("/necrons")
+  };
+  const handleTyranids = () => {
+    navigate("/tyranids")
+  };
+  const handleEldars = () => {
+    navigate("/eldars")
+  };
+  const handleTau = () => {
+    navigate("/tau")
+  };
 
   const handleSubmitLogin = async () => {
 
@@ -76,8 +91,8 @@ function NavBar(props) {
       .then((result) => {
         if (result.token) {
           localStorage.setItem("token", result.token),
-          localStorage.setItem("iduser", result.id_user),
-          setLoged(true)
+            localStorage.setItem("iduser", result.id_user),
+            setLoged(true)
 
         } else {
           alert('Contraseña o Nombre Incorrecto')
@@ -106,15 +121,15 @@ function NavBar(props) {
     setPassword('')
   }
   const token = localStorage.getItem("token")
-  
+
   useEffect(() => {
-    const getUser = async ()=>{
-      
-      
-    var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
+    const getUser = async () => {
+
+
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
 
       var requestOptions = {
         method: 'GET',
@@ -147,13 +162,13 @@ function NavBar(props) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Xenos" id="collasible-nav-dropdown" className='XenosDropDown'>
-              <NavDropdown.Item className='NavBarDropDownItem'>Eldars</NavDropdown.Item>
-              <NavDropdown.Item className='NavBarDropDownItem'> <Link to='/tyranids'>
-                Tyranids</Link>
+              <NavDropdown.Item onClick={handleEldars} className='NavBarDropDownItem'>Eldars</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleTyranids} className='NavBarDropDownItem'>
+                Tyranids
               </NavDropdown.Item>
-
-              <NavDropdown.Item className='NavBarDropDownItem'><Link to='/waagh'>Orks</Link></NavDropdown.Item>
-              <NavDropdown.Item className='NavBarDropDownItem'><Link to='/necrons'>Necrons</Link></NavDropdown.Item>
+              <NavDropdown.Item onClick={handleOrkz} className='NavBarDropDownItem'>Orks</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleNecrons} className='NavBarDropDownItem'>Necrons</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleTau} className='NavBarDropDownItem'>Tau's Empire</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link className='navBarItems'>World</Nav.Link>
             <Nav.Link className='navBarItems'>About Us</Nav.Link>
