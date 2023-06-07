@@ -2,9 +2,14 @@
     background: url('../../../public/homePageBackground.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    padding-top: 1%;
+    background-attachment: fixed;
+   
 }
 .homePageMainContent{
     background-color: rgba(0, 0, 0, 0.911);
+    padding-top: 1%;
+    border-radius: 10px 10px 0 0;
     
 }
 .w40kslideImg {
@@ -19,21 +24,26 @@
 .HomeMainPageNewsContainer {
     padding-top: 10%;
     padding-bottom: 5%;
+   
 }
 
 .homeMainPageNewsLists {
     border: 1px solid #e4e6e8;
-    border-color: white;
+    border-color: rgb(0, 0, 0);
     width: 40%;
     border-radius: 25px;
     list-style: none;
+    background: url('../../assets/backGround.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 
 }
 
 .homeMainPageNews {
-    border: 1px solid #e4e6e8;
+    border: 1px solid #00000036;
     border-radius: 14px 25px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Droid Serif', serif;
     padding: 10px;
 }
@@ -47,7 +57,7 @@
     position: absolute;
     width: 44%;
     height: 150px;
-    left: 50%;
+    left: 44%;
 }
 
 ._RZMQZ {

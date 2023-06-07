@@ -33,6 +33,7 @@ function WAAGH() {
     const [favourite, setFavourite] = useState(false);
     const token = localStorage.getItem('token');
 
+
     const handleFavourite = (orks) => {
         if (favourite) {
             var myHeaders = new Headers();
@@ -82,10 +83,7 @@ function WAAGH() {
             <NavBar />
 
             <div id='containerWAAGH'>
-                <div>
-                    {loged && favourite === false ? <button className='OrkzFAvButton' onClick={handleFavourite} ><img />Favourite</button> : <></>}
-                    {loged && favourite ? <button className='OrkzFAvButton' ><img />Favourite</button> : <></>}
-                </div>
+
                 <section> <img src={KOPTERO} alt="" className='animation' /></section>
                 <main className='mainSectionOrkoz'>
 

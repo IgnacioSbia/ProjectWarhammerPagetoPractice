@@ -16,6 +16,8 @@ import Player from "@madzadev/audio-player";
 import "@madzadev/audio-player/dist/index.css";
 import mainSong from '../../assets/Warhammer 40,000_ Darktide - .mp3'
 
+
+
 const tracks = [
     {
         url: mainSong,
@@ -32,13 +34,12 @@ const colors = `html {
     --searchBackground: #18191f;
     --searchText: #ffffff;
     --searchPlaceHolder: #575a77;
-    --playerBackground: #18191f;
     --titleColor: #ffffff; 
     --timeColor: #ffffff;
-    --progressSlider: #138A36;
+    --progressSlider: #ffff;
     --progressUsed: #ffffff;
     --progressLeft: #151616;
-    --volumeSlider: #138A36;
+    --volumeSlider: #ffff;
     --volumeUsed: #ffffff;
     --volumeLeft:  #151616;
     --playlistBackground: black;

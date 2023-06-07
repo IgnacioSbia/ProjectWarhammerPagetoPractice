@@ -1,0 +1,58 @@
+.aboutUsMain{
+    background-image: url('../../../public/homePageBackground.jpg');
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 1%;
+}
+.aboutUsContent{
+    border-radius: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    background-color: #121212;
+}
+.aboutUsTitle{
+    font-family: 'Droid Serif', serif;
+    color: white;
+    font-weight: bolder;
+}
+.aboutUsParagraphs{
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+.aboutUsgithubIcon{
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.aboutUsgithub{
+    padding-left: 5px;
+}
+.aboutUsLinkedinIcon{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 3px;
+}
+.aboutUsPersonalPageIcon{
+    width: 30px;
+    margin-left: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 3px;
+}
+.aboutUsSocialIcons a img{
+    transition: 0.3s ease-in-out;
+}
+.aboutUsSocialIcons a::before{
+    background-color: #ffffff;
+    transform: scale(0);
+    transition: all 300ms linear;
+}
+
+.aboutUsSocialIcons a:hover img{
+    filter: brightness(30%) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}

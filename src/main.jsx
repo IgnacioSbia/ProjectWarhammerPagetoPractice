@@ -12,6 +12,7 @@ import Tyranids from "./Components/Tyranids/Tyranids.jsx";
 import Necrons from "./Components/Necrons/Necrons.jsx";
 import Eldars from './Components/Eldars/Eldars.jsx'
 import TauEmpire from "./Components/Tau's/Tau'sEmpire.jsx";
+import AboutUs from "./Components/AboutUs/AboutUs.jsx";
 
 const Router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -47,6 +48,10 @@ const Router = createBrowserRouter([
     path: "/tau",
     element: <TauEmpire />
   },
+  {
+    path: "/aboutus",
+    element: <AboutUs />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
