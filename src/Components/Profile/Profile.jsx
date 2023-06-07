@@ -6,14 +6,15 @@ import './Profile.css';
 
 
 function Profile() {
-
+    const token = localStorage.getItem('token')
     const usermail = localStorage.getItem('mail')
     const [userName, setUserName] = useState('')
     localStorage.setItem('loged', true);
 
     useEffect(() => {
         const getUser = async ()=>{
-  
+          var myHeaders = new Headers();
+          myHeaders.append("Authorization",token);
         
       var requestOptions = {
         method: 'GET',
@@ -46,7 +47,7 @@ function Profile() {
                 <div>
                     <h1 className='ProfileUserFavouriteRace'>Favourite Race</h1>
                     <div className='ProfileFavouriteRace'>
-                        aaaa
+                        
                     </div>
                 </div>
             </section>

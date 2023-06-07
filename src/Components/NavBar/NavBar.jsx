@@ -57,7 +57,7 @@ function NavBar(props) {
     navigate("/")
   };
 
-  const handleSubmitLogin = () => {
+  const handleSubmitLogin = async () => {
 
     //Login Fetch
     const userlogin = { email: signEmail, password: password };
@@ -71,13 +71,13 @@ function NavBar(props) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/api/login", requestOptions)
+    await fetch("http://localhost:8000/api/login", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.token) {
           localStorage.setItem("token", result.token),
-            localStorage.setItem("iduser", result.id_user),
-            setLoged(!loged)
+          localStorage.setItem("iduser", result.id_user),
+          setLoged(true)
 
         } else {
           alert('Contraseña o Nombre Incorrecto')
@@ -105,10 +105,16 @@ function NavBar(props) {
     setSignEmail('')
     setPassword('')
   }
-
+  const token = localStorage.getItem("token")
+  
   useEffect(() => {
-    const getUser = async () => {
-
+    const getUser = async ()=>{
+      
+      
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
 
       var requestOptions = {
         method: 'GET',
@@ -131,6 +137,7 @@ function NavBar(props) {
     localStorage.clear()
     setLoged(false)
   }
+  console.log(userInfo)
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navBarBar'>
@@ -140,28 +147,28 @@ function NavBar(props) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Xenos" id="collasible-nav-dropdown" className='XenosDropDown'>
-              <NavDropdown.Item href="#action/3.1" className='NavBarDropDownItem'>Eldars</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" className='NavBarDropDownItem'> <Link to='/tyranids'>
+              <NavDropdown.Item className='NavBarDropDownItem'>Eldars</NavDropdown.Item>
+              <NavDropdown.Item className='NavBarDropDownItem'> <Link to='/tyranids'>
                 Tyranids</Link>
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="#action/3.3" className='NavBarDropDownItem'><Link to='/waagh'>Orks</Link></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4" className='NavBarDropDownItem'><Link to='/necrons'>Negrons</Link></NavDropdown.Item>
+              <NavDropdown.Item className='NavBarDropDownItem'><Link to='/waagh'>Orks</Link></NavDropdown.Item>
+              <NavDropdown.Item className='NavBarDropDownItem'><Link to='/necrons'>Necrons</Link></NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#pricing" className='navBarItems'>World</Nav.Link>
-            <Nav.Link href="#pricing" className='navBarItems'>About Us</Nav.Link>
+            <Nav.Link className='navBarItems'>World</Nav.Link>
+            <Nav.Link className='navBarItems'>About Us</Nav.Link>
           </Nav>
           {loged ?
             <NavDropdown title={userInfo.email} id="collasible-nav-dropdown" className='userDropDown'>
               <NavDropdown.Item onClick={handleProfile} className='NavBarDropDownItem'>Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" className='NavBarDropDownItem' onClick={handleLogOut}>Log out</NavDropdown.Item>
+              <NavDropdown.Item className='NavBarDropDownItem' onClick={handleLogOut}>Log out</NavDropdown.Item>
             </NavDropdown>
             :
             <Nav>
-              <Nav.Link href="#deets" className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShow}>
+              <Nav.Link className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShow}>
                 Register
               </Button></Nav.Link>
-              <Nav.Link href="#deets" className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShowLogin}>Log In</Button></Nav.Link>
+              <Nav.Link className='navBarItems'><Button className='NavBarRegisterButton' variant="primary" onClick={handleShowLogin}>Log In</Button></Nav.Link>
             </Nav>
           }
         </Navbar.Collapse>

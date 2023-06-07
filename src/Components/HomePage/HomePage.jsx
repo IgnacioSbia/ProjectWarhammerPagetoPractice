@@ -14,15 +14,9 @@ import newsWarhammer from '../../../public/WarhammerNews.png';
 import Footer from '../Footer/Footer';
 import Player from "@madzadev/audio-player";
 import "@madzadev/audio-player/dist/index.css";
-import tus50 from '../../assets/emanero.mp3'
 import mainSong from '../../assets/Warhammer 40,000_ Darktide - .mp3'
 
 const tracks = [
-    {
-        url: tus50,
-        title: "MOMO",
-        tags: ["house"],
-    },
     {
         url: mainSong,
         title: "Warhammer 40,000_ Darktide",
@@ -61,7 +55,7 @@ function HomePage() {
             </header>
             <main className='homePageMain'>
                 {/* Presentation*/}
-                <div className='container-sm homePageMain'>
+                <div className='container-sm homePageMainContent'>
                     <div>
                         <Carousel>
                             <Carousel.Item interval={3000} className='itemcarousel' >
@@ -185,4 +179,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default HomePage;
