@@ -10,6 +10,7 @@ import WAAGH from "./Components/WAAGH/WAAGH.jsx";
 import Profile from "./Components/Profile/Profile.jsx";
 import Tyranids from "./Components/Tyranids/Tyranids.jsx";
 import Necrons from "./Components/Necrons/Necrons.jsx";
+import AboutUs from "./Components/AboutUs/AboutUs.jsx";
 
 const Router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -36,7 +37,9 @@ const Router = createBrowserRouter([
   {
     path: "/necrons",
     element: <Necrons />
-  }
+  },
+  {path: "/aboutus",
+   element:<AboutUs/>}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

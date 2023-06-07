@@ -3,8 +3,10 @@
     height: 50.5%;
 }
 .ProfileuserInformation{
+    border-radius: 10px 10px 0 0 ;
+    margin-top: 1%;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.623);
+    background-color: rgba(0, 0, 0, 0.89);
     height: 100vh;
     flex-direction: column;
 }
@@ -15,7 +17,10 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('../../../public/warhammerBackgroundNavBar3.jpg');
+    background: url('../../../public/ProfileBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .ProfileUserName{
     line-height: 270%;
