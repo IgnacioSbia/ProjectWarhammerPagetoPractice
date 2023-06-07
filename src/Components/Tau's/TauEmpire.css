@@ -1,0 +1,33 @@
+#tauContainer {
+    padding-top: 4rem;
+    background: url(../../assets/necronsWallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 20px;
+    padding: 4rem 3rem 1rem 3rem;
+}
+
+.tauMainSection,
+.tauHistorySection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.555));
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.tauInfoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tauLogo {
+    width: 100px;
+    height: 100px;
+    filter: invert();
+}

@@ -10,6 +10,8 @@ import WAAGH from "./Components/WAAGH/WAAGH.jsx";
 import Profile from "./Components/Profile/Profile.jsx";
 import Tyranids from "./Components/Tyranids/Tyranids.jsx";
 import Necrons from "./Components/Necrons/Necrons.jsx";
+import Eldars from './Components/Eldars/Eldars.jsx'
+import TauEmpire from "./Components/Tau's/Tau'sEmpire.jsx";
 import AboutUs from "./Components/AboutUs/AboutUs.jsx";
 
 const Router = createBrowserRouter([
@@ -26,6 +28,10 @@ const Router = createBrowserRouter([
     element: <WAAGH />
   },
   {
+    path: "/eldars",
+    element: <Eldars />
+  },
+  {
     path: '/tyranids',
     element: <Tyranids />
   },
@@ -38,8 +44,14 @@ const Router = createBrowserRouter([
     path: "/necrons",
     element: <Necrons />
   },
-  {path: "/aboutus",
-   element:<AboutUs/>}
+  {
+    path: "/tau",
+    element: <TauEmpire />
+  },
+  {
+    path: "/aboutus",
+    element: <AboutUs />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
