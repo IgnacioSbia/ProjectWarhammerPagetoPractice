@@ -1,9 +1,12 @@
 .homePageMain {
-    background: url('../../../public/warhammerBackgroundNavBar3.jpg');
+    background: url('../../../public/homePageBackground.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
+.homePageMainContent{
+    background-color: rgba(0, 0, 0, 0.911);
+    
+}
 .w40kslideImg {
     width: 50%;
     height: 10px;
