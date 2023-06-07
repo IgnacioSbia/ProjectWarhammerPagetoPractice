@@ -55,7 +55,7 @@ function HomePage() {
             </header>
             <main className='homePageMain'>
                 {/* Presentation*/}
-                <div className='container-sm homePageMain'>
+                <div className='container-sm homePageMainContent'>
                     <div>
                         <Carousel>
                             <Carousel.Item interval={3000} className='itemcarousel' >

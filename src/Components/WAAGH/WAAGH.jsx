@@ -87,7 +87,7 @@ function WAAGH() {
           
             <div id='containerWAAGH'>
                 <div>
-                    {loged && !favourite ? <button className='OrkzFAvButton' ><img/>Favourite</button>: <></> }
+                    {loged && favourite === false ? <button className='OrkzFAvButton' onClick={handleFavourite} ><img/>Favourite</button>: <></> }
                     {loged && favourite ? <button className='OrkzFAvButton' ><img/>Favourite</button>: <></>}
                 </div>
                 <section> <img src={KOPTERO} alt="" className='animation' /></section>

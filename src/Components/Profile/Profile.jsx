@@ -47,7 +47,7 @@ function Profile() {
                 <div>
                     <h1 className='ProfileUserFavouriteRace'>Favourite Race</h1>
                     <div className='ProfileFavouriteRace'>
-                        aaaa
+                        
                     </div>
                 </div>
             </section>

@@ -77,7 +77,7 @@ function NavBar(props) {
         if (result.token) {
           localStorage.setItem("token", result.token),
           localStorage.setItem("iduser", result.id_user),
-          setLoged(!loged)
+          setLoged(true)
 
         } else {
           alert('Contraseña o Nombre Incorrecto')
