@@ -3,6 +3,7 @@ import NavBar from '../NavBar/NavBar'
 import userDefaultImg from '../../../public/UserProfileDefault.jpg';
 import Image from 'react-bootstrap/Image';
 import './Profile.css';
+import Footer from '../Footer/Footer';
 
 
 function Profile() {
@@ -33,6 +34,7 @@ function Profile() {
       getUser();
     }, []);
 
+    
   return (
     <>
         <header>
@@ -44,15 +46,11 @@ function Profile() {
                     <Image src={userDefaultImg} roundedCircle  className='ProfileUserImage'/>
                     <h2 className='ProfileUserName p-3'>{userName.email}</h2>
                 </div>
-                <div>
-                    <h1 className='ProfileUserFavouriteRace'>Favourite Race</h1>
-                    <div className='ProfileFavouriteRace'>
-                        
-                    </div>
-                </div>
             </section>
-            
         </main>
+        <footer>
+          <Footer/>
+        </footer>
 
     </>
   )

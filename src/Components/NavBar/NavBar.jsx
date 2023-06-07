@@ -136,6 +136,7 @@ function NavBar(props) {
   const handleLogOut = () => {
     localStorage.clear()
     setLoged(false)
+    navigate("/");
   }
   console.log(userInfo)
 
