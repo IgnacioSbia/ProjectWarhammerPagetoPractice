@@ -172,7 +172,7 @@ function NavBar(props) {
               <NavDropdown.Item onClick={handleTau} className='NavBarDropDownItem'>Tau's Empire</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link className='navBarItems'>World</Nav.Link>
-            <Nav.Link className='navBarItems'>About Us</Nav.Link>
+            <Nav.Link className='navBarItems'><Link to={"/aboutus"} className='navBarAboutUs'>About Us</Link></Nav.Link>
           </Nav>
           {loged ?
             <NavDropdown title={userInfo.email} id="collasible-nav-dropdown" className='userDropDown'>
