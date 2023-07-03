@@ -12,6 +12,14 @@
     color: gray;
     font-weight: bolder;
 }
+.navBarAboutUs:any-link{
+    text-decoration: none;
+    color: gray;
+}
+.navBarAboutUs:any-link:hover{
+    text-decoration: none;
+    color: white;
+}
 .NavBarDropDownItem{
     background-color: gray;
 }
